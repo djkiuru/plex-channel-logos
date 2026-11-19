@@ -1,0 +1,24 @@
+{
+  "title": "Pangram AI Check",
+  "description": "Scan student submissions for AI-generated text with Pangram",
+  "oidc_initiation_url": "https://YOUR_TOOL_URL/login",
+  "target_link_uri": "https://YOUR_TOOL_URL/",
+  "public_jwk_url": "https://YOUR_TOOL_URL/keys",
+  "scopes": [],
+  "extensions": [{
+    "platform": "canvas.instructure.com",
+    "privacy_level": "public",
+    "settings": {
+      "placements": [{
+        "placement": "assignment_menu",
+        "enabled": true,
+        "message_type": "LtiResourceLinkRequest",
+        "text": "AI Check"
+      }]
+    }
+  }],
+  "custom_fields": {
+    "canvas_course_id": "$Canvas.course.id",
+    "canvas_assignment_id": "$Canvas.assignment.id"
+  }
+}
